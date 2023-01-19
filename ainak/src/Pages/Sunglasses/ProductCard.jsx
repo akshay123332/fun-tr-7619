@@ -1,14 +1,16 @@
 import React from 'react'
+import styles from "./sunglass.module.css"
+//import {CiStar} from "react-icons/fa"
 
 const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
   return (
     <div>
         <img style={{width:"50%"}} src={image} alt={desc} />
-        <h2>{desc}</h2>
-        <h3>{`${desc} :  ${frameshape} :  ${compatible}`}</h3>
-        <h2>Rs : {price}</h2>
-        <p>Rating:{rating}</p>
-        <button>ADD TO CART</button>
+        <p className={`${styles.productfont}`}>{desc}</p>
+        <h3 className={`${styles.descfont}`}>{`${desc} :  ${frameshape} :  ${compatible}`}</h3>
+        <h2 className={`${styles.rupees}`}>Rs : {price}</h2>
+        <p>Rating: {rating} </p>
+        <button className={`${styles.button}`}>ADD TO CART</button>
     </div>
   )
 }
