@@ -7,6 +7,8 @@ import { IoWoman } from "react-icons/io";
 
 import { TbMoodBoy } from "react-icons/tb";
 import { GiSunglasses } from "react-icons/gi";
+import { BsGraphDown,BsGraphUp } from "react-icons/bs";
+
 
 import { IoIosGlasses,IoMdGlasses,IoGlasses } from "react-icons/io";
 import { useSearchParams } from 'react-router-dom';
@@ -21,6 +23,8 @@ const Sidebar = () => {
  const initialFrame=searchparams.getAll(`frameshape`)
  const [frameshape,setframeshape]=useState(initialFrame ||[]);
 
+ const initialOrder=searchparams.getAll(`order`)
+ const [order,setorder]=useState(initialOrder || "")
 
   const HandleChange=(e)=>{
     const categoryArr=[...compatible];
@@ -41,14 +45,16 @@ const Sidebar = () => {
     }
     setframeshape(frameshapeyArr)
   }
- 
+  console.log(order)
   useEffect(()=>{
     let params={
       compatible,
-      frameshape
+      frameshape,
+
     }
+    order && (params.order=order)
     setsearchparams(params)
-  },[compatible,frameshape])
+  },[compatible,frameshape,order])
   
  
   return (
@@ -138,7 +144,29 @@ const Sidebar = () => {
     
   </div>
 
-  {/* // type */}
+  <div>
+  <h1 className={styles.heading} >SORT BY PRICE</h1>
+  <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",marginBottom:"10px",alignItems:"center"}}  >
+
+<div>
+<label style={{display:"flex",flexDirection:"column"}} >
+  <input type="checkbox" className={styles.checkbox} value="desc" onChange={(e)=>setorder(e.target.value)} checked={order=="desc"}  />
+   <span className={styles.label}>
+     <BsGraphDown  size="40px"  />
+     </span>
+     High to Low</label>
+</div>
+
+<div>
+<label style={{display:"flex",flexDirection:"column",}} >
+  <input type="checkbox" className={styles.checkbox} value="asc" onChange={(e)=>setorder(e.target.value)} checked={order=="asc"} />
+   <span className={styles.label}>
+     <BsGraphUp  size="40px"  />
+     </span>
+     Low to High</label>
+   </div>
+ </div>
+</div>
   </>
   )
 }
