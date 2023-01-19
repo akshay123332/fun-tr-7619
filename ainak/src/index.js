@@ -20,7 +20,7 @@ root.render(
   </Provider>
 
 
-    <App />
+    
   
 
 );

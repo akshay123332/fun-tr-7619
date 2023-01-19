@@ -8,9 +8,9 @@ const GetdataLoading=()=>({type:GET_DATA_LOADING})
 
  const GetdataFailure=()=>({type:GET_DATA_FAILURE})
 
- export const getData=(paramObj)=>(dispatch)=>{
+ export const getData=(url,paramObj)=>(dispatch)=>{
     dispatch(GetdataLoading())
-    axios.get(`https://rich-gray-scarab-fez.cyclic.app/eyeglasses`,paramObj).then((res)=>{
+    axios.get(url,paramObj).then((res)=>{
         dispatch(GetdataSuccess(res.data))
     }).catch((err)=>{
         dispatch(GetdataFailure())
