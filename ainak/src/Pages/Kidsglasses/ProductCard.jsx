@@ -1,8 +1,19 @@
 import React from 'react'
 import styles from "./kidsglass.module.css"
+import axios from "axios"
 //import {CiStar} from "react-icons/fa"
 
 const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
+
+  const handlecart=(id,image,desc,price,rating,frameshape,compatible)=>{
+console.log(id,image,desc,price,rating,frameshape,compatible);
+let cartobj={
+  id,image,desc,price,rating,frameshape,compatible
+}
+axios.post("https://rich-gray-scarab-fez.cyclic.app/cart",cartobj).then((res)=>console.log(res)).catch((Err)=>console.log(Err))
+
+  }
+  
   return (
     <div>
         <img style={{width:"50%"}} src={image} alt={desc} />
@@ -10,7 +21,7 @@ const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
         <h3 className={`${styles.descfont}`}>{`${desc} :  ${frameshape} :  ${compatible}`}</h3>
         <h2 className={`${styles.rupees}`}>Rs : {price}</h2>
         <p>Rating: {rating} </p>
-        <button className={`${styles.button}`}>ADD TO CART</button>
+        <button onClick={()=>handlecart(id,image,desc,price,rating,frameshape,compatible)} className={`${styles.button}`}>ADD TO CART</button>
     </div>
   )
 }
