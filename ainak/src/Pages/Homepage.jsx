@@ -4,6 +4,7 @@ import Sunglasses from "./Sunglasses/Sunglasses"
 import Travelglasses from "./Travelglasses/Travelglassess"
 import Computerglasses from './ComputerGlasses/Computerglasses';
 import Eyeglasses from './Eyeglasses/Eyeglasses';
+import CartA from './Cart/CartA';
 
 const Homepage = () => {
   return (
@@ -23,8 +24,7 @@ const Homepage = () => {
      <h1>TravelGlasses</h1>
      <Travelglasses/>
      </div>
-     <h1>Footer</h1>
-      
+     <h1>Footer</h1> 
     </div>
   )
 }
