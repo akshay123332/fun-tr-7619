@@ -1,8 +1,9 @@
 .product{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,max-content));
+    grid-template-columns:repeat(auto-fit,minmax(300px,max-content));
     gap:33px;  
     padding: 2%; 
+    width: 75%; 
 }
 .productfont{
     font-family:cursive;
