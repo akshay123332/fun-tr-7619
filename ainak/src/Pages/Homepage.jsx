@@ -11,20 +11,15 @@ const Homepage = () => {
     <div>
       <h1>Footer</h1>
       <div>
-      <div>Sidebar</div>
-      <h1>Eyeglasses</h1>
-      <Eyeglasses/>
-      <h1>ComputerGlasses</h1>
-      <Computerglasses/>
-      <h1>KidsGlasses</h1>
-      <Kidsglasses/>
-      <h1>SunGlasses</h1>
-      <Sunglasses/>
+
       
+   
      <h1>TravelGlasses</h1>
-     <Travelglasses/>
+     <Travelglasses/> */}
      </div>
      <h1>Footer</h1> 
+
+     <h1>Footer</h1>
     </div>
   )
 }
