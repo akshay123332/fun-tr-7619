@@ -2,6 +2,7 @@ import './App.css';
 import Menspage from './Pages/Menspage';
 
 import Homepage from './Pages/Homepage';
+import CartA from './Pages/Cart/CartA';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
        {/* <Menspage/> */}
     
 
-      <Homepage/>
+      {/* <Homepage/> */}
+      <CartA/>
      </div>
 
   );
