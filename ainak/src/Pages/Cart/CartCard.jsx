@@ -1,36 +1,60 @@
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
-import React from 'react';
+import  axios  from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { deleteProduct } from './api';
 
-const CartCard = () => {
-    let url = "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/628x301/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-sky-full-rim-hustlr-eyeglasses_blue-block-screen-glasses_-peyush-bansal-shark-tank-_-sky-blue-transparent-full-rim-wayfarer-lenskart-hustlr-lb-e14058-h-c3_csvfile-1671778849582-hustlr_1_28_12_2022.jpg"
+// ************************************ Local Storage ******************************
+
+let priceData=localStorage.getItem("price")||{}
+
+const CartCard = ({id,image,price,desc,HandleChange}) => {
+  let c=1
+  let [count,setCount]=useState(1)
+  let [fprice,setFprice]=useState(price*count)
+  priceData[price]?priceData[price]=c+=1:priceData[price]=c
+  console.log(priceData,"sadfgh")
+  const handleRemove=()=>{
+    deleteProduct(id).then((res)=>console.log("deltwr"))
+    HandleChange()
+  }
+  const HandleRepeat=()=>{
+    setCount((prve)=>prve+1)
+    setFprice(count*price)
+    HandleChange()
+    priceData[price]?priceData[price]=count++:priceData[price]=1
+    localStorage.setItem("price",JSON.stringify(priceData))
+    console.log(priceData,priceData[price])
+  }
+  
 
     return (
-        <Box>
+        <Box key={id}>
             <Box className="App" display="flex" maxWidth="100%" margin={"auto"} flexDirection="row" alignItems="center" gap="20px" boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} boxSize="border-box" padding={"20px 40px"} borderRadius="12px" ml={"-2.5"} mb="20px">
           <Box boxSize='30%'>
-            <Image src={url} alt='Dan Abramov' />
+            <Image src={image} alt='Dan Abramov' />
           </Box>
           <Box mt="10px" mb="10px" >
-            <Link mb="30px">
+            <Link to="/" mb="30px">
               <Flex justifyContent={"space-between"}>
                 <Text maxWidth="80%" textAlign="left">
-                  Black Green Full Rim Aviator Vincent Chase Polarized Vintage Vc S14076-C3 Sunglasses
+                  {/* Black Green Full Rim Aviator Vincent Chase Polarized Vintage Vc S14076-C3 Sunglasses */}
+                   {desc}
                 </Text>
-                <Text>$13030</Text>
+                <Text>{price}</Text>
               </Flex>
             </Link>
             <hr style={{borderBottom:"1px dashed gray"}} />
             <Box mt={"10px"} mb="10px">
               <Flex alignItems='center' justifyContent={"space-between"} fontWeight={"600"}>
                 <Text >Final Price</Text>
-                <Text>$1599</Text>
+                <Text>{fprice}</Text>
               </Flex>
             </Box>
             <hr style={{borderBottom:"1px dashed gray"}} />
             <Box display="flex" justifyContent="flex-start" gap="15%" mt={"10px"}>
-              <Button>Remove</Button>
-              <Button>Repeat</Button>
+              <Button onClick={handleRemove} >Remove</Button>
+              <Button onClick={HandleRepeat} >Repeat</Button>
             </Box>
           </Box>
         </Box>
