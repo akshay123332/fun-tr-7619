@@ -58,8 +58,8 @@ const Sidebar = () => {
   
  
   return (
-    <>
-  <div>
+    <div>
+  <div >
     <h1 className={styles.heading} >CATEGORY</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}  >
        <div>
@@ -167,7 +167,7 @@ const Sidebar = () => {
    </div>
  </div>
 </div>
-  </>
+  </div>
   )
 }
 

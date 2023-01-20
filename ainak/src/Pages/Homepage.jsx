@@ -15,7 +15,7 @@ const Homepage = () => {
       
    
      <h1>TravelGlasses</h1>
-     <Travelglasses/> */}
+     <Computerglasses/> */
      </div>
      <h1>Footer</h1> 
 

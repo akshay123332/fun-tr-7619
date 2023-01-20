@@ -45,7 +45,7 @@ useEffect(()=>{
 
   return (
     <div>
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex",padding:"25px"}}>
           <div style={{width:"20%"}}><Sidebar/></div>
           <div columns={[1,2,3,3,3]} spacing={25} padding="2%" className={`${styles.product}`}>
           {data?.map((el,index)=>{
