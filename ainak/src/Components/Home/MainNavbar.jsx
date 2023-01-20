@@ -10,7 +10,7 @@ const MainNavbar = () => {
             {
                 NavbarData.map((item,index)=>{
                     return (
-                       <div key={index}>{item.name}</div>
+                       <div style={{marginTop:"15px"}} key={index}>{item.name}</div>
                     )
                 })
             }
