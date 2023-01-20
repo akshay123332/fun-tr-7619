@@ -45,11 +45,11 @@ useEffect(()=>{
 
   return (
     <div>
-        <div style={{display:"flex",padding:"25px"}}>
-          <div style={{width:"20%"}}><Sidebar/></div>
-          <div columns={[1,2,3,3,3]} spacing={25} padding="2%" className={`${styles.product}`}>
+        <div style={{display:"flex",padding:"5px"}}>
+          <div style={{width:"20%", border:"0.5rem double cadetblue", height:"500px",marginTop:"30px", borderRadius:"9px"}}><Sidebar/></div>
+          <div  className={`${styles.product}`}>
           {data?.map((el,index)=>{
-               return <div style={{border:"thick double #32a1ce",padding:"2%" , borderRadius:"7px" , backgroundColor:"azure", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}} key={el.id} >
+               return <div style={{border:"thick double #32a1ce",padding:"2.5%" , borderRadius:"9px", backgroundColor:"azure", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}} key={el.id} >
                <ProductCard id={el.id} image={el.image} desc={el.desc} price={el.price} rating={el.rating} frameshape={el.frameshape} compatible={el.compatible} />
                </div>
             })}
