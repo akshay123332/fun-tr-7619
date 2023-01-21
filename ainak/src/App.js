@@ -3,6 +3,7 @@ import Menspage from './Pages/Menspage';
 
 import Homepage from './Pages/Homepage';
 import CartA from './Pages/Cart/CartA';
+import Checkout from './Pages/Checkout/Checkout';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
     
 
       {/* <Homepage/> */}
-      <CartA/>
+      {/* <CartA/> */}
+      <Checkout/>
      </div>
 
   );
