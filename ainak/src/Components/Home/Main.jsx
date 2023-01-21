@@ -71,6 +71,7 @@ const Main = () => {
 }
 
 export default Main
+
 const frames = [
     {
         img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_14.jpg"

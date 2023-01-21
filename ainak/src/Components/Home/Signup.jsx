@@ -11,7 +11,10 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Text,
+  Alert,
+  AlertIcon,
+  Portal,
+ 
   useDisclosure,
   FormHelperText,
   usePopover,
@@ -22,10 +25,10 @@ import {
   PopoverBody,
   PopoverArrow,
   PopoverCloseButton,
-  IconButton,
-  Box
+  
 } from "@chakra-ui/react";
-
+import { useNavigate} from "react-router-dom"
+import Login from "./Login";
 const Signup = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({});
@@ -36,14 +39,21 @@ const Signup = () => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
       setError("Please fill in all the fields");
-      return;
+      return(
+        <Alert status='success'>
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
+      );
     }
     localStorage.setItem("user-credentials", JSON.stringify(formData));
     setUserCredentials(formData);
     setError("");
     onClose();
   };
+  
 
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -64,30 +74,25 @@ const Signup = () => {
   return (
     <>
     {!userCredentials ? (
-       <Button onClick={onOpen}>Sign Up</Button>
+       <button style={{marginLeft:"8px",marginBottom:"6px"}} onClick={onOpen}>Sign Up</button>
     ) : (
-      <Popover placement="bottom" onClose={onPopoverClose} isOpen={isPopoverOpen}>
-        <PopoverTrigger>
-          <Box as="span" cursor="pointer" onClick={onPopoverOpen}>
-            {userCredentials.firstName}
-          </Box>
-        </PopoverTrigger>
-        <PopoverContent zIndex={4}>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverHeader>{userCredentials.firstName}</PopoverHeader>
-          
-          <PopoverBody>
-            <IconButton
-              aria-label="logout"
-              icon="logout"
-              size="xs"
-              onClick={logout}
-            />
-            Logout
-          </PopoverBody>
-        </PopoverContent>
-        </Popover>
+      <Popover>
+  <PopoverTrigger>
+    <button  style={{marginLeft:"8px",marginBottom:"6px"}}>{userCredentials.firstName}</button>
+  </PopoverTrigger>
+  <Portal>
+    <PopoverContent>
+      <PopoverArrow />
+      <PopoverHeader>Options</PopoverHeader>
+      <PopoverCloseButton />
+      <PopoverBody>
+        <Button colorScheme='blue' onClick={logout}>Logout</Button>
+      </PopoverBody>
+      
+    </PopoverContent>
+  </Portal>
+</Popover>
+      
     )}
     <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -114,6 +119,9 @@ const Signup = () => {
             </form>
           </ModalBody>
           <ModalFooter>
+          <Button >
+      <Login/>Login
+    </Button>
             <Button onClick={handleSubmit}>Sign Up</Button>
           </ModalFooter>
         </ModalContent>

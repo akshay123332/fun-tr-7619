@@ -5,9 +5,11 @@ import Signup from "./Signup"
 import "./Navbar.css"
 import MainNavbar from './MainNavbar'
 import Login from './Login'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-  
+  const navigate = useNavigate();
+
   return (
     <div>
     <div className='nav1'>
@@ -30,7 +32,7 @@ Lenskart Franchise</p>
     </div>
     <div className='N2'>
     <div>
-        <img style={{marginTop:"8px"}} src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" alt="" />
+        <img onClick={()=>navigate("/")} style={{marginTop:"8px"}} src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" alt="" />
     </div>
     <div>
         <div className='numinp'>
