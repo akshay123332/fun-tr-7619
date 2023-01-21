@@ -6,7 +6,7 @@ import Sidebar from '../../Components/Sidebar/Sidebar'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { getData } from '../../redux/menspage/action'
- //import Navbar from '../../Components/Home/Navbar'
+ import Navbar from '../../Components/Home/Navbar'
 import Footer from '../../Components/Home/Footer'
 
 const Computerglasses = () => {
@@ -46,7 +46,7 @@ useEffect(()=>{
 
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
         <div style={{display:"flex",padding:"5px"}}>
           <div style={{width:"20%", border:"0.5rem double cadetblue",height:"480px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px"}}><Sidebar/></div>
           <div  className={`${styles.product}`}>
