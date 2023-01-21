@@ -54,7 +54,7 @@ Lenskart Franchise</p>
         <Signup /> 
         {/* <Login/> */}
         <p className='text1'>Wishlist</p>
-        <p className='text1'>Cart</p>
+        <p onClick={()=>navigate("/cartA")} className='text1'>Cart</p>
     </Flex>
     </div>
     <MainNavbar/>
