@@ -40,7 +40,7 @@ https://gentle-cactus-7afc93.netlify.app/
 ## Some screenshots of the project
 
 <img src="">
-<img src="travelocity_photos/home_page.png">
+<img src="home_page.png">
 <img src="./travelocity_photos/sign_in_page.png">
 <img src="./travelocity_photos/products_page.png">
 <img src="./travelocity_photos/single_product_page.png">
