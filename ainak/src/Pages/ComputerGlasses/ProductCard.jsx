@@ -3,15 +3,17 @@ import styles from "./computer.module.css"
 //import {CiStar} from "react-icons/fa"
 import axios from "axios"
 
+
 const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
 
   const handlecart=(id,image,desc,price,rating,frameshape,compatible)=>{
+   alert("Successfully Added to Cart")
     console.log(id,image,desc,price,rating,frameshape,compatible);
     let cartobj={
       id,image,desc,price,rating,frameshape,compatible
     }
     axios.post("https://rich-gray-scarab-fez.cyclic.app/cart",cartobj).then((res)=>console.log(res)).catch((Err)=>console.log(Err))
-    
+   
       }
 
   return (
