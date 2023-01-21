@@ -2,7 +2,7 @@
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,max-content));
     gap:33px;  
-    padding: 2%; 
+    padding: 2.5%; 
     width: 75%;
 }
 .productfont{
