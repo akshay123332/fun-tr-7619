@@ -38,8 +38,8 @@ useEffect(()=>{
   return (
     <div>
       <Navbar/>
-        <div style={{display:"flex",padding:"5px"}}>
-          <div style={{width:"20%", border:"0.5rem double cadetblue",height:"480px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px"}}><Sidebar/></div>
+        <div style={{display:"flex",padding:"45px" , width:"100%",margin:"auto"}}>
+          <div style={{width:"20%", border:"0.5rem double cadetblue",height:"480px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px",boxSizing:"rivert"}}><Sidebar/></div>
           <div  className={`${styles.product}`}>
           {loader && <Loader/>}
           {data?.map((el,index)=>{

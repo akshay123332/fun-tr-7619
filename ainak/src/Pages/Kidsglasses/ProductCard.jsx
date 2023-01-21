@@ -6,6 +6,7 @@ import axios from "axios"
 const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
 
   const handlecart=(id,image,desc,price,rating,frameshape,compatible)=>{
+    alert("Successfully Added to Cart")
 console.log(id,image,desc,price,rating,frameshape,compatible);
 let cartobj={
   id,image,desc,price,rating,frameshape,compatible

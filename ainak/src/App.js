@@ -6,6 +6,8 @@ import CartA from './Pages/Cart/CartA';
 import Sunglasses from './Pages/Sunglasses/Sunglasses';
 import Computerglasses from './Pages/ComputerGlasses/Computerglasses';
 import Loader from './Components/Loader';
+import Multistep from './Pages/ComputerGlasses/Checkout/Checkout';
+import Eyeglasses from './Pages/Eyeglasses/Eyeglasses';
 
 
 
@@ -13,7 +15,7 @@ import Loader from './Components/Loader';
 function App() {
   return (
     <div className="App">
-
+{/* <Multistep/> */}
      
        {/* <Menspage/> */}
 {/*     
@@ -21,6 +23,7 @@ function App() {
       {/* <Homepage/> */}
       <Computerglasses/>
       {/* <CartA/> */}
+      {/* <Eyeglasses/> */}
      </div>
 
   );
