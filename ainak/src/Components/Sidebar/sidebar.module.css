@@ -6,7 +6,7 @@ input[type=checkbox] {
     display: inline-block;
     padding: 3px;
     /* background: url("unchecked.png") no-repeat left center; */ 
-    padding-left: 10px;
+    padding-left: 9px;
   }
   input[type=checkbox]:checked + .label {
     background: #fff;
