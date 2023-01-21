@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import {SimpleGrid } from '@chakra-ui/react'
 import ProductCard from './ProductCard'
 import styles from "./computer.module.css"
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { getData } from '../../redux/menspage/action'
+ //import Navbar from '../../Components/Home/Navbar'
+import Footer from '../../Components/Home/Footer'
 
 const Computerglasses = () => {
 const[produ,setProdu]=useState([])
@@ -45,8 +46,9 @@ useEffect(()=>{
 
   return (
     <div>
+      {/* <Navbar/> */}
         <div style={{display:"flex",padding:"5px"}}>
-          <div style={{width:"20%", border:"0.5rem double cadetblue", height:"500px",marginTop:"30px", borderRadius:"9px"}}><Sidebar/></div>
+          <div style={{width:"20%", border:"0.5rem double cadetblue",height:"480px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px"}}><Sidebar/></div>
           <div  className={`${styles.product}`}>
           {data?.map((el,index)=>{
                return <div style={{border:"thick double #32a1ce",padding:"2.5%" , borderRadius:"9px", backgroundColor:"azure", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}} key={el.id} >
@@ -56,6 +58,7 @@ useEffect(()=>{
           </div>
             
         </div>
+    <Footer/>
     </div>
   )
 }
