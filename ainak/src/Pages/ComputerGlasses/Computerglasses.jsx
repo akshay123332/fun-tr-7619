@@ -32,17 +32,6 @@ useEffect(()=>{
     dispatch(getData(comp_url,paramObj))
 },[location.search])
 
-// const getProdu=()=>{
-//     axios.get("https://rich-gray-scarab-fez.cyclic.app/computerglasses")
-//     .then((res)=>setProdu(res.data))
-//     .catch((err)=>console.log(err))
-// }
-//style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)" , gap:"50px"}}
-//console.log(data);
-
-// useEffect(()=>{
-//     getData()
-// },[])
 
   return (
     <div>
