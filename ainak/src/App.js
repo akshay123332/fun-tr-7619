@@ -5,6 +5,7 @@ import Homepage from './Pages/Homepage';
 import CartA from './Pages/Cart/CartA';
 import Sunglasses from './Pages/Sunglasses/Sunglasses';
 import Computerglasses from './Pages/ComputerGlasses/Computerglasses';
+import AllRoutes from './Routes/AllRoutes';
 
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
       <h1>Enter</h1>
        {/* <Menspage/> */}
     
-
+       <AllRoutes/>
       {/* <Homepage/> */}
-      <Computerglasses/>
+
+      {/* <Computerglasses/> */}
       {/* <CartA/> */}
      </div>
 
