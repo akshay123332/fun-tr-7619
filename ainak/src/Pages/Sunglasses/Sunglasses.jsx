@@ -18,10 +18,13 @@ const [searchparams]=useSearchParams()
 console.log(data)
 
 useEffect(()=>{
+  let order=searchparams.get(`order`)
     let paramObj={
         params:{
             compatible:searchparams.getAll(`compatible`),
-            frameshape:searchparams.getAll(`frameshape`)
+            frameshape:searchparams.getAll(`frameshape`),
+            _sort: order &&"price",
+            _order: order && order
         },
     }
     dispatch(getData(sunglass_url,paramObj))
