@@ -1,25 +1,17 @@
 import React from 'react'
-import Kidsglasses from "./Kidsglasses/Kidsglasses"
-import Sunglasses from "./Sunglasses/Sunglasses"
-import Travelglasses from "./Travelglasses/Travelglassess"
-import Computerglasses from './ComputerGlasses/Computerglasses';
-import Eyeglasses from './Eyeglasses/Eyeglasses';
-import CartA from './Cart/CartA';
+import Main from '../Components/Home/Main'
+import Navbar from '../Components/Home/Navbar'
+import Footer from '../Components/Home/Footer'
+import AllRoutes from '../Routes/AllRoutes'
+
 
 const Homepage = () => {
   return (
     <div>
-      <h1>Footer</h1>
-      <div>
-
+      <Navbar/>
+      <Main/>
       
-   
-     <h1>TravelGlasses</h1>
-     <Travelglasses/> */}
-     </div>
-     <h1>Footer</h1> 
-
-     <h1>Footer</h1>
+      <Footer/>
     </div>
   )
 }

@@ -1,10 +1,15 @@
-import { Box, Flex, Input, Text } from '@chakra-ui/react'
+import { Box, Flex, Input } from '@chakra-ui/react'
 import {BsFillTelephoneFill} from "react-icons/bs"
 import React from 'react'
+import Signup from "./Signup"
 import "./Navbar.css"
 import MainNavbar from './MainNavbar'
-import Slider1 from './Sliders/Slider1'
+import Login from './Login'
+import { useNavigate } from 'react-router-dom'
+
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
     <div className='nav1'>
@@ -27,7 +32,7 @@ Lenskart Franchise</p>
     </div>
     <div className='N2'>
     <div>
-        <img style={{marginTop:"8px"}} src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" alt="" />
+        <img onClick={()=>navigate("/")} style={{marginTop:"8px"}} src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" alt="" />
     </div>
     <div>
         <div className='numinp'>
@@ -46,18 +51,14 @@ Lenskart Franchise</p>
     </div>
     <Flex cursor={'pointer'}>
         <p className='text1'>Track Order</p>
-        <p className='text1'>Sign In & Sign Up </p>
+        <Signup /> 
+        {/* <Login/> */}
         <p className='text1'>Wishlist</p>
-        <p className='text1'>Cart</p>
+        <p onClick={()=>navigate("/cartA")} className='text1'>Cart</p>
     </Flex>
     </div>
     <MainNavbar/>
-    <div className='gif1'>
-        <img src="https://static1.lenskart.com/media/desktop/img/Dec22/15-Dec/bogo11.gif" alt="" />
-         <div className='1Cor'>
-           <Slider1/>
-        </div>       
-    </div>
+    
     </div>
     
   )
