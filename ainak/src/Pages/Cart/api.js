@@ -7,5 +7,5 @@ export const getData=async()=>{
   }
 
 export const deleteProduct=async(id)=>{
-    return await axios.delete(`https://rich-gray-scarab-fez.cyclic.app/cart/${id}`)
+    await axios.delete(`https://rich-gray-scarab-fez.cyclic.app/cart/${id}`)
   }

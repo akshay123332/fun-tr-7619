@@ -2,7 +2,7 @@ import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 import  axios  from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { deleteProduct } from './api';
+import { deleteProduct, getData } from './api';
 
 // ************************************ Local Storage ******************************
 
@@ -16,7 +16,8 @@ const CartCard = ({id,image,price,desc,HandleChange}) => {
   console.log(priceData,"sadfgh")
   const handleRemove=()=>{
     deleteProduct(id).then((res)=>console.log("deltwr"))
-    HandleChange()
+    //HandleChange()
+    getData()
   }
   const HandleRepeat=()=>{
     setCount((prve)=>prve+1)

@@ -5,17 +5,28 @@ import Homepage from './Pages/Homepage';
 import CartA from './Pages/Cart/CartA';
 import Sunglasses from './Pages/Sunglasses/Sunglasses';
 import Computerglasses from './Pages/ComputerGlasses/Computerglasses';
+ fw20_0455_Day-5
 import AllRoutes from './Routes/AllRoutes';
+=======
+import Loader from './Components/Loader';
+
+
+ main
 
 
 function App() {
   return (
     <div className="App">
 
-      <h1>Enter</h1>
+     
        {/* <Menspage/> */}
+ fw20_0455_Day-5
     
        <AllRoutes/>
+=======
+{/*     
+<Loader/> */}
+ main
       {/* <Homepage/> */}
 
       {/* <Computerglasses/> */}
