@@ -6,14 +6,11 @@ import { deleteProduct, getData } from './api';
 
 // ************************************ Local Storage ******************************
 
-let priceData = localStorage.getItem("price") || {}
 
-const CartCard = ({ id, image, price, desc, HandleChange }) => {
-  let c = 1
+let priceData=JSON.parse(localStorage.getItem("price"))||[]
+const CartCard = ({ id, image, price, desc, HandleChange}) => {
   let [count, setCount] = useState(1)
   let [fprice, setFprice] = useState(price * count)
-  priceData[price] ? priceData[price] = c += 1 : priceData[price] = c
-  // console.log(priceData,"sadfgh")
   const handleRemove = () => {
     deleteProduct(id).then((res) => res)
     HandleChange()
@@ -23,9 +20,10 @@ const CartCard = ({ id, image, price, desc, HandleChange }) => {
     setCount((prve) => prve + 1)
     setFprice(count * price)
     HandleChange()
-    // priceData[price] ? priceData[price] = count++ : priceData[price] = 1
-    // localStorage.setItem("price", JSON.stringify(priceData))
-    // console.log(priceData,priceData[price])
+    priceData.push(price)
+    console.log(priceData,"click");
+    localStorage.setItem("price",JSON.stringify(priceData))
+  
   }
 
 

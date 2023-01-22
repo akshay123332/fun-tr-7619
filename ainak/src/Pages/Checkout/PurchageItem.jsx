@@ -4,8 +4,12 @@ import {Box,Text,Image, Flex} from "@chakra-ui/react"
 import PurchageCardIOtems from './PurchageCardIOtems';
 const PurchageItem = () => {
      let arr=JSON.parse(localStorage.getItem("cartItems"))||[]
-     console.log("arr",arr)
-     let price=JSON.parse(localStorage.getItem("TotalPrice"))||0
+     let pri=JSON.parse(localStorage.getItem("price"))||[]
+     let price=JSON.parse(localStorage.getItem("ee"))||0
+     
+     for(let el of pri){
+        price+=el
+     }
     return (
         <Box  w="30%">
             <Flex backgroundColor={"#333333"} color="#ffff" justifyContent="space-between"  boxSize="border-box"padding="10px">

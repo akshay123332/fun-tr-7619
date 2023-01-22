@@ -2,9 +2,16 @@ import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { ArrowForwardIcon, InfoOutlineIcon } from "@chakra-ui/icons"
 import { Link, Navigate } from "react-router-dom"
+import { useEffect, useState } from 'react';
 
-let TotalPrice=JSON.parse(localStorage.getItem("price"))||0
-const Billdetails = ({data}) => {
+
+let Price=JSON.parse(localStorage.getItem("price"))||[]
+let tp=JSON.parse(localStorage.getItem("ee"))||0
+
+console.log(Price,"PP",tp)
+const Billdetails = ({handleChange}) => {
+    const [TotalPrice,setTotalPrice]=useState(tp)
+    let p=0
     let dddd = {
         maxW: "90%",
         m: "auto",
@@ -12,11 +19,14 @@ const Billdetails = ({data}) => {
         justifyContent: "space-between",
         alignItems: "center",
     }
-
-    for(let el of data){
-        TotalPrice+=el.price
-       }
-       localStorage.setItem("TotalPrice",TotalPrice+179)
+    for(let el of Price){
+        p+=el
+    }
+    
+    useEffect(()=>{
+        setTotalPrice(TotalPrice+p)
+    },[])
+    console.log("ppr",TotalPrice)
 
     return (
         <Box key={123}>
