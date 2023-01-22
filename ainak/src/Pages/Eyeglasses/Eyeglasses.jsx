@@ -37,9 +37,9 @@ useEffect(()=>{
   return (
     <div>
       <Navbar/>
-      {loader && <Loader/>}
+      
           <div style={{display:"flex",padding:"45px" , width:"100%",margin:"auto"}}>
-          <div style={{width:"20%", border:"0.5rem double cadetblue",height:"480px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px",boxSizing:"rivert"}}><Sidebar/></div>
+          <div style={{width:"auto", border:"0.5rem double cadetblue",height:"500px",marginTop:"30px", borderRadius:"9px" ,padding:"25px", position:"sticky" , top:"30px",boxSizing:"rivert"}}><Sidebar/></div>
           
           <div columns={[1,2,3,3,3]} spacing={25} padding="2%" className={`${styles.product}`}>
           
@@ -47,9 +47,11 @@ useEffect(()=>{
                return <div style={{border:"thick double #32a1ce",padding:"2.5%" , borderRadius:"9px", backgroundColor:"azure", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}} key={el.id} >
                <ProductCard id={el.id} image={el.image} desc={el.desc} price={el.price} rating={el.rating} frameshape={el.frameshape} compatible={el.compatible} />
                </div>
+
             })}
+            
           </div>
-          
+      
         </div>
         <Footer/>
     </div>

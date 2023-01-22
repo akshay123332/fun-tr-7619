@@ -8,11 +8,14 @@ import { deleteProduct, getData } from './api';
 
 
 let priceData=JSON.parse(localStorage.getItem("price"))||[]
-const CartCard = ({ id, image, price, desc, HandleChange}) => {
-  let [count, setCount] = useState(1)
-  let [fprice, setFprice] = useState(price * count)
-  const handleRemove = () => {
-    deleteProduct(id).then((res) => res)
+const CartCard = ({id,image,price,desc,HandleChange}) => {
+  let c=1
+  let [count,setCount]=useState(1)
+  let [fprice,setFprice]=useState(price*count)
+  priceData[price]?priceData[price]=c+=1:priceData[price]=c
+  console.log(priceData,"sadfgh")
+  const handleRemove=(id)=>{
+    deleteProduct(id).then((res)=>console.log("deltwr"))
     HandleChange()
     getData()
   }

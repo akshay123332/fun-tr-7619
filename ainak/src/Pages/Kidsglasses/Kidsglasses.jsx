@@ -40,9 +40,9 @@ useEffect(()=>{
     <div>
       <Navbar/>
          <div style={{display:"flex"}}>
-         <div style={{width:"20%", border:"0.5rem double cadetblue", height:"500px",marginTop:"30px", borderRadius:"9px" , position:"sticky" , top:"30px"}}><Sidebar/></div>
+         <div style={{width:"20%", border:"0.5rem double cadetblue", height:"500px",marginTop:"30px",padding:"15px", borderRadius:"9px" , position:"sticky" , top:"30px"}}><Sidebar/></div>
           <div columns={[1,2,3,3,3]} spacing={25} padding="2%" className={`${styles.product}`}>
-          {loader && <Loader/>}
+          
           {data?.map((el,index)=>{
                return <div style={{border:"thick double #32a1ce",padding:"2%" , borderRadius:"7px" , backgroundColor:"azure", boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}} key={el.id} >
                <ProductCard id={el.id} image={el.image} desc={el.desc} price={el.price} rating={el.rating} frameshape={el.frameshape} compatible={el.compatible} />

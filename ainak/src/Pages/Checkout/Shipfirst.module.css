@@ -46,8 +46,12 @@ input:focus{
     border-radius: 5px;
     margin: 20px 0px;
     font-weight: 500;
+    padding-left: 10pxdf;
     display: flex;
-    align-items: star;
+    align-items: flex-start;
+    text-align: center;
+    padding-left: 5%;
+    
     
 
 }

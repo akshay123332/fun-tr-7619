@@ -5,7 +5,7 @@ import PurchageItem from './PurchageItem';
 
 const Checkout = () => {
     return (
-        <Box w="80%" m="auto" mb="2%">
+        <Box w="80%" m="auto" mb="2%" mt="3%">
             <Flex justifyContent="flex-start" gap="3%" >
            <ShipFirst/>
            <PurchageItem/>
