@@ -41,14 +41,14 @@ https://gentle-cactus-7afc93.netlify.app/
 
 ## Some screenshots of the project
 
-<img src="./Ainka.jpeg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png">
-<img src="./travelocity_photos/sign_in_page.png">
-<img src="./travelocity_photos/products_page.png">
-<img src="./travelocity_photos/single_product_page.png">
-<img src="./travelocity_photos/single_product_page1.png">
-<img src="./travelocity_photos/payment_page.png">
-<img src="./travelocity_photos/payment_method_page.png">
-<img src="./travelocity_photos/footer_page.png">
+<img src="./Screenshots/Ainak logo.jpg">
+<img src="./Screenshots/Screenshot (449).png">
+<img src="./Screenshots/Screenshot (451).png">
+<img src="./Screenshots/Screenshot (452).png">
+<img src="./Screenshots/Screenshot (453).png">
+<img src="./Screenshots/Screenshot (454).png">
+<img src="./Screenshots/Screenshot (455).png">
+<img src="./Screenshots/Screenshot (456).png">
+
 
 ### Thanks for reading
