@@ -3,7 +3,9 @@ import { specs_grid } from './specs-grid'
 import "./Main.css"
 import { Box, Flex } from '@chakra-ui/react'
 import Tc from './Tc'
+import { useNavigate } from 'react-router-dom'
 const Main = () => {
+    const navigate = useNavigate();
   return (
     <div>
       <div className='gif1'>
@@ -15,7 +17,7 @@ const Main = () => {
         {
             specs_grid.map((item,index)=>{
                 return (
-                    <img src={item.img} alt="" />
+                    <img onClick={()=>navigate(item.link)} src={item.img} alt="" />
                 )
             })
         }

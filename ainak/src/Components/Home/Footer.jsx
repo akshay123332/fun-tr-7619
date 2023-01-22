@@ -31,8 +31,8 @@ const Footer = () => {
           </div>
           <div className='options'>
             <Flex className="images">
-              <img style={{marginRight:"5px"}} src="https://static.lenskart.com/media/desktop/img/play-store.svg" alt="" />
-              <img src="https://static.lenskart.com/media/desktop/img/app-store.svg" alt="" />
+              <a href="https://play.google.com/store/apps/details?id=com.lenskart.app&hl=en_IN&pli=1"><img style={{marginRight:"5px"}} src="https://static.lenskart.com/media/desktop/img/play-store.svg" alt="" /></a>
+              <a href="https://apps.apple.com/pk/app/lenskart-eyewear-shopping-app/id970343205"><img src="https://static.lenskart.com/media/desktop/img/app-store.svg" alt="" /></a>
             </Flex>
             <Text mt={5} textAlign={'center'}>Download Lenskart App to buy</Text>
             <Text textAlign={'center'}>Eyeglasses, Sunglasses and Contact Lenses</Text>

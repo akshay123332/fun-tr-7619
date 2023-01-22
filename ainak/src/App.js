@@ -20,13 +20,13 @@ function App() {
 
      
        {/* <Menspage/> */}
- fw20_0455_Day-5
+
     
        <AllRoutes/>
-=======
+
 {/*     
 <Loader/> */}
- main
+ 
       {/* <Homepage/> */}
 
       {/* <Computerglasses/> */}

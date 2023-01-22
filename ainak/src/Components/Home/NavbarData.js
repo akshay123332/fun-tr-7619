@@ -5,8 +5,8 @@ export const NavbarData = [
         link:"/eyeglasses"
     },
     {
-        name:"COMPUTER GLASSES",
-        link:"/computerglasses"
+        name:"TRAVEL GLASSES",
+        link:"/travelglasses"
     },
     {
         name:"KIDS GLASSES",

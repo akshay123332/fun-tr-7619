@@ -1,21 +1,28 @@
 export const specs_grid = [
     {
-        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_04.jpg"
+        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_04.jpg",
+        link:"/eyeglasses"
+
     },
     {
-        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_05.jpg"
+        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_05.jpg",
+        link:"/sunglasses"
     },
     {
         img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_06.jpg"
+        ,link:"/travelglasses"
     },
     {
-        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_07.jpg"
+        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_07.jpg",
+        link:"/eyeglasses"
     },
     {
-        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_08.jpg"
+        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_08.jpg",
+        link:"/kidsglasses"
     },
     {
-        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_09.jpg"
+        img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_09.jpg",
+        link:"/kidsglasses"
     },
     {
         img:"https://static1.lenskart.com/media/desktop/img/Jan23/images/Frame-632504_10.jpg"
