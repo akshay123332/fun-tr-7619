@@ -20,6 +20,7 @@ import {
 
 import { useToast } from '@chakra-ui/react';
 import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Form1 = () => {
   const [show, setShow] = React.useState(false);
@@ -326,6 +327,7 @@ export default function ShippingDetails() {
   const toast =useToast();
   const [step, setStep] = useState(1)
   const [progress, setProgress] = useState(33.33);
+  const navigate=useNavigate()
   return (
     <>
       <Box
@@ -381,13 +383,13 @@ export default function ShippingDetails() {
                 variant="solid"
                 onClick={() => {
                   toast({
-                    title: 'Account created.',
+                    title: 'Order Status.',
                     description: "Your Order is placed .",
                     status: 'success',
                     duration: 3000,
                     isClosable: true,
                   });
-                  <Navigate to="/"/>
+                  navigate("/")
                 }}>
                 Place Order
               </Button>

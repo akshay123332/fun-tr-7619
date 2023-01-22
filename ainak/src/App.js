@@ -35,7 +35,7 @@ function App() {
       {/* <Homepage/> */}
 
       {/* <CartA/> */}
-      <Checkout/>
+      {/* <Checkout/> */}
 
 
       {/* <Computerglasses/> */}

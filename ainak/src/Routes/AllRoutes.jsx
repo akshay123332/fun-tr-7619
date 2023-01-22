@@ -9,6 +9,7 @@ import Sunglasses from '../Pages/Sunglasses/Sunglasses'
 import Computerglasses from '../Pages/ComputerGlasses/Computerglasses'
 
 import CartA from '../Pages/Cart/CartA'
+import Checkout from './../Pages/Checkout/Checkout';
 
 const AllRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AllRoutes = () => {
         <Route path='/sunglasses' element={<Sunglasses/>} />
         <Route path='/travelglasses' element={<Travelglassess/>} />
         <Route path='/cartA' element={<CartA/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
         <Route path="*" element={<Homepage/>} />
       </Routes>
     </div>
