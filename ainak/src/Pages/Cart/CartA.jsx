@@ -5,8 +5,8 @@ import NavCart from './NavCart';
 import BillDetails from './BillDetails';
 import { useEffect } from 'react';
 import { getData } from './api';
-
-
+let Price=0,price=[]
+let cartItems=localStorage.getItem("cartItmes")||[]
 const CartA = () => {
   const [change,setChange]=useState(false)
     let [data,setData]=useState([])
@@ -14,12 +14,18 @@ const CartA = () => {
     const HandleChange=()=>{
       setChange((prev)=>!prev)
     }
+
     useEffect(()=>{
       getData().then((res)=>{
         setData(res)
+        cartItems=res
+        localStorage.setItem("cartItems",JSON.stringify(cartItems))
       })
     },[change])
     
+     
+     
+     
     return (
         <Box backgroundColor={"rgb(251, 249, 247)"} color="gray.900">
     <Box ml={"-18%"}>
@@ -28,10 +34,9 @@ const CartA = () => {
     <Box maxWidth={"80%"} m="auto" >
     <Box display="flex" justifyContent={"space-between"} >
       <Box maxW="60%">
-      <Text fontSize='2xl' mb={"5%"}>Cart Items 3</Text>
+      <Text fontSize='2xl' mb={"5%"} textAlign="start">Cart Items {cartItems.length}</Text>
         {
-          data.map((el)=>{
-           
+          cartItems.length>0 && cartItems.map((el)=>{
             return(
               <CartCard key={el.id} {...el}  HandleChange={HandleChange}/>
             )

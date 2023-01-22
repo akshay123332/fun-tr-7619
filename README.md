@@ -1,5 +1,11 @@
 # Ainak 
 # Ainak_website_photos
+<<<<<<< HEAD
+import Ainka from"./Ainka.jpeg"
+=======
+import Ainka from "./Ainka.jpeg"
+>>>>>>> 617a6f525c233cba837d5dad5a34a545ba880282
+
 This is the photos of the Ainak website. Ainak is an online Ecommerce Website which is providing high quality eyewear. From this website, users can Order Computer Glasses,Sun Glasses,Kids Glasses and much more across the world.
 
 **To see the live site click the below link.**
@@ -39,8 +45,9 @@ https://gentle-cactus-7afc93.netlify.app/
 
 ## Some screenshots of the project
 
-<img src="">
-<img src="home_page.png">
+<<<<<<< HEAD
+<img src="Ainka">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png">
 <img src="./travelocity_photos/sign_in_page.png">
 <img src="./travelocity_photos/products_page.png">
 <img src="./travelocity_photos/single_product_page.png">
@@ -48,5 +55,16 @@ https://gentle-cactus-7afc93.netlify.app/
 <img src="./travelocity_photos/payment_page.png">
 <img src="./travelocity_photos/payment_method_page.png">
 <img src="./travelocity_photos/footer_page.png">
+=======
+<img src="./Screenshots/Ainak logo.jpg">
+<img src="./Screenshots/Screenshot (449).png">
+<img src="./Screenshots/Screenshot (451).png">
+<img src="./Screenshots/Screenshot (452).png">
+<img src="./Screenshots/Screenshot (453).png">
+<img src="./Screenshots/Screenshot (454).png">
+<img src="./Screenshots/Screenshot (455).png">
+<img src="./Screenshots/Screenshot (456).png">
+
+>>>>>>> 617a6f525c233cba837d5dad5a34a545ba880282
 
 ### Thanks for reading

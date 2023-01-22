@@ -1,10 +1,17 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { ArrowForwardIcon, InfoOutlineIcon } from "@chakra-ui/icons"
-import { Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
+import { useEffect, useState } from 'react';
 
 
-const Billdetails = ({data}) => {
+let Price=JSON.parse(localStorage.getItem("price"))||[]
+let tp=JSON.parse(localStorage.getItem("ee"))||0
+
+console.log(Price,"PP",tp)
+const Billdetails = ({handleChange}) => {
+    const [TotalPrice,setTotalPrice]=useState(tp)
+    let p=0
     let dddd = {
         maxW: "90%",
         m: "auto",
@@ -12,19 +19,22 @@ const Billdetails = ({data}) => {
         justifyContent: "space-between",
         alignItems: "center",
     }
-
-    let total=0
-    for(let el of data){
-        total+=el.price
+    for(let el of Price){
+        p+=el
     }
+    
+    useEffect(()=>{
+        setTotalPrice(TotalPrice+p)
+    },[])
+    console.log("ppr",TotalPrice)
 
     return (
-        <Box>
-            <Text fontSize='2xl' mb={"8%"}>Bill Details</Text>
+        <Box key={123}>
+            <Text fontSize='2xl' mb={"8%"} textAlign="start">Bill Details</Text>
             <Box width={"100%"} m={"auto"} boxSize="border-box" boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} padding="20px" borderRadius={"12px"}>
                 <Flex style={dddd} borderTop="0px solid">
                     <Text >Total Price</Text>
-                    <Text>₹{total+99}</Text>
+                    <Text>₹{TotalPrice}</Text>
                 </Flex>
                 
                 <Flex style={dddd} borderTop="1px dashed gray">
@@ -34,7 +44,7 @@ const Billdetails = ({data}) => {
                
                 <Flex style={dddd} borderTop="1px dashed gray" >
                     <Text>Final Price</Text>
-                    <Text>₹{total}</Text>
+                    <Text>₹{TotalPrice}</Text>
                 </Flex>
                 
                 <Flex style={dddd} borderTop="1px dashed gray">
@@ -49,7 +59,7 @@ const Billdetails = ({data}) => {
                 
                 <Flex style={dddd} borderTop="1px dashed gray">
                     <Text fontWeight={"700"}>Total payable</Text>
-                    <Text fontWeight={"600"}>₹{total+278}</Text>
+                    <Text fontWeight={"600"}>₹{TotalPrice+179}</Text>
                 </Flex>
             </Box>
             <Box className='SilverMemberShipGaut' boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px" cursor="pointer" padding="20px" mt="30px" borderRadius="12px" border="1px solid gold" background="#f7f1de" onClick={() => {
@@ -68,7 +78,8 @@ const Billdetails = ({data}) => {
                     <ArrowForwardIcon border="1px solid " w="30px" h="20px" borderRadius="50%"></ArrowForwardIcon>
                 </Flex>
             </Box>
-            <Box className='couponGauti' mt="5%" boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} boxSizing="border-box" padding="10px 20px 30px 30px" borderRadius={"12px"}>
+           <Link to="/">
+           <Box className='couponGauti' mt="5%" boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} boxSizing="border-box" padding="10px 20px 30px 30px" borderRadius={"12px"}>
             <Flex justifyContent="space-between" alignItems="center" mt="20px">
                     <Box>
                         <Text fontWeight={"600"}>Apply Coupon</Text>
@@ -77,10 +88,12 @@ const Billdetails = ({data}) => {
                     <ArrowForwardIcon border="1px solid " w="30px" h="20px" borderRadius="50%"></ArrowForwardIcon>
                 </Flex>
             </Box>
-            <Box mt="15%">
+           </Link>
+            <Box mt="10%" mb={"10%"}>
+                <Link to="/checkout">
                 <Button background="#11DAAC" w="100%" fontSize="18px"padding="16px 24px" h="56px" borderRadius="100px" color="#000042" _hover={{color:"#11DAAc",color:"#FFFF"}}>
                     Proceed To Checkout
-                </Button>
+                </Button></Link>
             </Box>
         </Box>
     );
