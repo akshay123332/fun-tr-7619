@@ -5,13 +5,18 @@ import Eyeglasses from "../Pages/Eyeglasses/Eyeglasses"
 import Kidsglasses from '../Pages/Kidsglasses/Kidsglasses'
 import Travelglassess from '../Pages/Travelglasses/Travelglassess'
 import Sunglasses from '../Pages/Sunglasses/Sunglasses'
+
+import Computerglasses from '../Pages/ComputerGlasses/Computerglasses'
+
 import CartA from '../Pages/Cart/CartA'
+
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
         <Route path='/eyeglasses' element={<Eyeglasses/>}/>
+        <Route path='/computerglasses' element={<Computerglasses/>}/>
         <Route path='/kidsglasses' element={<Kidsglasses/>} />
         <Route path='/sunglasses' element={<Sunglasses/>} />
         <Route path='/travelglasses' element={<Travelglassess/>} />

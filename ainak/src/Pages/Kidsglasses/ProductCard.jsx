@@ -6,6 +6,7 @@ import axios from "axios"
 const ProductCard = ({id,image,desc,price,rating,frameshape,compatible}) => {
 
   const handlecart=(id,image,desc,price,rating,frameshape,compatible)=>{
+    alert("Successfully Added to Cart")
 console.log(id,image,desc,price,rating,frameshape,compatible);
 let cartobj={
   id,image,desc,price,rating,frameshape,compatible
@@ -16,7 +17,7 @@ axios.post("https://rich-gray-scarab-fez.cyclic.app/cart",cartobj).then((res)=>c
   
   return (
     <div>
-        <img style={{width:"50%"}} src={image} alt={desc} />
+        <img style={{width:"50%",marginLeft:"70px"}} src={image} alt={desc} />
         <p className={`${styles.productfont}`}>{desc}</p>
         <h3 className={`${styles.descfont}`}>{`${desc} :  ${frameshape} :  ${compatible}`}</h3>
         <h2 className={`${styles.rupees}`}>Rs : {price}</h2>

@@ -41,6 +41,9 @@ https://gentle-cactus-7afc93.netlify.app/
 ## Some screenshots of the project
 
 <img src="https://drive.google.com/file/d/1P1B--OkIY0v6sV18LvEUIlA4bhHBTcZW/view?usp=share_link">
+
+<img src="./Screenshot(449).png">
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png">
 <img src="travelocity_photos/sign_in_page.png">
 <img src="travelocity_photos/products_page.png">

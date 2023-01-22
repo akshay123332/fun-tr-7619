@@ -3,7 +3,7 @@
     grid-template-columns:repeat(auto-fit,minmax(300px,max-content));
     gap:33px;  
     padding: 2%; 
-    width: 75%;
+    width: 95%;
 }
 .productfont{
     font-family:sans-serif;

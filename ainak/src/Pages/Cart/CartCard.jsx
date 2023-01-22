@@ -14,7 +14,7 @@ const CartCard = ({id,image,price,desc,HandleChange}) => {
   let [fprice,setFprice]=useState(price*count)
   priceData[price]?priceData[price]=c+=1:priceData[price]=c
   console.log(priceData,"sadfgh")
-  const handleRemove=()=>{
+  const handleRemove=(id)=>{
     deleteProduct(id).then((res)=>console.log("deltwr"))
     //HandleChange()
     getData()
