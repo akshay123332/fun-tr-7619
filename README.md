@@ -1,5 +1,6 @@
 # Ainak 
 # Ainak_website_photos
+import Ainka from "./Ainka.jpeg"
 
 This is the photos of the Ainak website. Ainak is an online Ecommerce Website which is providing high quality eyewear. From this website, users can Order Computer Glasses,Sun Glasses,Kids Glasses and much more across the world.
 
@@ -40,7 +41,7 @@ https://gentle-cactus-7afc93.netlify.app/
 
 ## Some screenshots of the project
 
-<img src="./Screenshot(449).png">
+<img src="Ainka">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png">
 <img src="./travelocity_photos/sign_in_page.png">
 <img src="./travelocity_photos/products_page.png">
