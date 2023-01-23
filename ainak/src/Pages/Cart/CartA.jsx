@@ -18,10 +18,24 @@ const CartA = () => {
     useEffect(()=>{
       getData().then((res)=>{
         setData(res)
-        cartItems=res
-        localStorage.setItem("cartItmes",JSON.stringify(cartItems))
+        
       })
-    },[change])
+    },[data])
+
+    const handleRemove=async (id)=>{
+      let res=await fetch(`https://rich-gray-scarab-fez.cyclic.app/cart/${id}`,{
+        method:"DELETE",
+        header:{
+          "Content-Type":"application/json"
+        }
+      })
+      let data=await res.json()
+// getData().then((res)=>{setData(res)})
+
+let response=await fetch(`https://rich-gray-scarab-fez.cyclic.app/cart`)
+let actual=await response.json()
+setData(actual)
+    }
     
      
      
@@ -36,9 +50,9 @@ const CartA = () => {
       <Box maxW="60%">
       <Text fontSize='2xl' mb={"5%"} textAlign="start">Cart Items {cartItems.length}</Text>
         {
-          cartItems.length>0 && cartItems.map((el)=>{
+          data.length>0 && data.map((el)=>{
             return(
-              <CartCard key={el.id} {...el}  HandleChange={HandleChange}/>
+              <CartCard key={el.id} {...el} handleRemove={handleRemove}  HandleChange={HandleChange}/>
             )
           })
         }

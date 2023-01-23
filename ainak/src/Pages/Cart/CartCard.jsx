@@ -8,17 +8,17 @@ import { deleteProduct, getData } from './api';
 
 
 let priceData=JSON.parse(localStorage.getItem("price"))||[]
-const CartCard = ({id,image,price,desc,HandleChange}) => {
+const CartCard = ({id,image,price,desc,HandleChange,handleRemove}) => {
   let c=1
   let [count,setCount]=useState(1)
   let [fprice,setFprice]=useState(price*count)
   priceData[price]?priceData[price]=c+=1:priceData[price]=c
   console.log(priceData,"sadfgh")
-  const handleRemove=(id)=>{
-    deleteProduct(id).then((res)=>console.log("deltwr"))
-    HandleChange()
-    getData()
-  }
+  // const handleRemove=(id)=>{
+  //   deleteProduct(id).then((res)=>console.log("deltwr"))
+  //   HandleChange()
+  //   getData()
+  // }
   const HandleRepeat = () => {
     setCount((prve) => prve + 1)
     setFprice(count * price)
@@ -55,7 +55,7 @@ const CartCard = ({id,image,price,desc,HandleChange}) => {
           </Box>
           <hr style={{ borderBottom: "1px dashed gray" }} />
           <Box display="flex" justifyContent="flex-start" gap="15%" mt={"10px"}>
-            <Button onClick={handleRemove} >Remove</Button>
+            <Button onClick={()=>{handleRemove(id)}} >Remove</Button>
             <Button onClick={HandleRepeat} >Repeat</Button>
           </Box>
         </Box>
