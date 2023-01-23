@@ -19,7 +19,7 @@ const CartA = () => {
       getData().then((res)=>{
         setData(res)
         cartItems=res
-        localStorage.setItem("cartItems",JSON.stringify(cartItems))
+        localStorage.setItem("cartItmes",JSON.stringify(cartItems))
       })
     },[change])
     

@@ -13,8 +13,8 @@ export const NavbarData = [
         link:"/kidsglasses"
     },
     {
-        name:"CONTACT LENSES",
-        link:"/contactlenses"
+        name:"COMPUTER GLASSES",
+        link:"/computerglasses"
     },
     {
         name:"SUNGLASSES",
